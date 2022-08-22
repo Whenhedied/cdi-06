@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 163.04,
+      "left": 131.16,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 2.51, "left": -62.64, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "lcd1:RS", "pico:GP0", "green", [ "v0" ] ],
+    [ "lcd1:D4", "pico:GP2", "green", [ "v0" ] ],
+    [ "lcd1:K", "pico:GND.1", "green", [ "v0" ] ],
+    [ "lcd1:E", "pico:GP1", "green", [ "v0" ] ],
+    [ "lcd1:D5", "pico:GP3", "green", [ "v0" ] ],
+    [ "lcd1:D6", "pico:GP4", "green", [ "v0" ] ],
+    [ "lcd1:D7", "pico:GP5", "green", [ "v0" ] ],
+    [ "lcd1:VSS", "pico:GND.1", "green", [ "v0" ] ],
+    [ "lcd1:VDD", "pico:3V3", "green", [ "v0" ] ],
+    [ "lcd1:A", "pico:3V3", "green", [ "v0" ] ]
+  ]
+}
